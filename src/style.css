@@ -1,0 +1,677 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;1,400&family=Rubik+Glitch&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  color: white;
+  box-sizing: border-box;
+}
+body {
+  background-color: #251a3a;
+}
+h4 {
+  font-weight: normal;
+}
+b:hover {
+  /* Hovers de Registrate*/
+  text-decoration: underline;
+}
+.logo-gggirls {
+  background: url('./assets/logo-gggirls.png') no-repeat;
+}
+/*LOGIN COMPLETO, SE REUTILIZA EN REGISTER*/
+.mainContainer {
+  background-color: #251a3a;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 15px;
+}
+.mainContainer img {
+  height: 100px;
+  width: 100px;
+}
+.mainContainer h1 {
+  font-size: 35px;
+}
+.mainContainer p {
+  font-size: 15px;
+  color: white;
+  text-shadow: 0.5px 0.5px 3px rgba(177, 88, 155, 0.8);
+}
+#slogan {
+  /* display None en modo pequeño */
+  display: none;
+}
+.transparent-input {
+  padding: 1%;
+  background: transparent !important;
+  border: none !important;
+  width: 100% !important;
+  height: 100%;
+}
+input::placeholder {
+  text-align: left;
+}
+#emailContainer {
+  /* Igual en Register */
+  display: flex;
+  border: solid 1px #b1589b;
+  font-size: 15px;
+  background: #5f5277;
+  border-radius: 10px;
+  width: 85%;
+  height: 50px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#passwordContainer {
+  /* Igual en Register */
+  display: flex;
+  border: solid 1px #b1589b;
+  font-size: 15px;
+  background: #5f5277;
+  border-radius: 10px;
+  width: 85%;
+  height: 50px;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+input[type='checkbox'] {
+  width: 15px;
+  height: 15px;
+  border: none;
+  margin-right: 10px;
+  position: absolute;
+  align-self: flex-end;
+  appearance: none;
+}
+::placeholder {
+  color: white;
+}
+.mainContainer button {
+  background: #656fcb;
+  border: 0;
+  border-radius: 10px;
+  padding: 15px;
+  margin: auto;
+}
+.mainContainer button:hover {
+  background-color: #6980c7;
+}
+.registerContainer {
+  /* Cajita de Registro */
+  background: #411946;
+  border-radius: 5px;
+  border: 1px solid #a85495;
+  box-shadow: 0px 0px 5px 1px rgb(168 84 149 / 45%);
+  padding: 5px;
+  width: 70%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.registerContainer p {
+  background: #411946;
+  font-size: 15px;
+  opacity: 50%;
+}
+a {
+  text-decoration: none;
+  padding-bottom: 15px;
+}
+dialog {
+  /* Dialog Pop Up */
+  width: 100%;
+  height: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  background: #251a3a;
+  border: 1px solid #a85495;
+  box-shadow: 0px 0px 5px 1px rgb(168 84 149 / 45%);
+  padding: 3px;
+}
+::backdrop,
+dialog + .backdrop {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#mainDivDialog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+#mainDivDialog p {
+  margin: 10px;
+}
+#botonClosePopUp {
+  padding: 0;
+  width: 5%;
+  margin-right: 10px;
+  background-color: transparent;
+  border: none;
+}
+.ojitocerrado {
+  /* Show and Hide Password*/
+  background-image: url(./assets/ojitosabiertos-blanco.png) !important;
+  display: inline-block;
+  background-size: contain !important;
+}
+.ojitoabierto {
+  background-image: url(./assets/ojitoscerrados-blanco.png) !important;
+  display: inline-block;
+  background-size: contain !important;
+}
+/* POSTS */
+#navbarContainer {
+  position: sticky;
+  top: 0;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 50px;
+  background-color: #411946;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tittlepost {
+  font-size: 20px;
+}
+#buttonLogOut {
+  margin-right: 20px;
+  height: 30px;
+  background-color: #b1589b;
+  border: 0;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logogg {
+  height: inherit;
+  padding: 10px;
+  margin-left: 20px;
+}
+.postsContainer {
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  background-color: #251a3b;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.userDataContainer {
+  height: 900px;
+  width: 25%;
+  margin-left: 0px;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+}
+#dataUser {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+}
+#userDataDiv {
+  height: 300px;
+  width: 100%;
+  margin-left: 0px;
+}
+#trendingDataDiv {
+  height: 600px;
+  width: 100%;
+  margin-left: 0px;
+}
+.divPosts {
+  height: 900px;
+  width: 95%;
+  margin-left: 0px;
+  background-color: #411946;
+  border: solid 1px #b1589b;
+  box-shadow: 0px 0px 5px 1px rgb(168 84 149 / 45%);
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+}
+.inputMainContainer {
+  width: auto;
+  padding: 10px;
+  display: flex;
+}
+.postsContainer button {
+  background: #656fcb;
+  border: 0;
+  border-radius: 10px;
+  width: auto;
+  padding: 8px;
+  margin: 5px;
+  align-self: flex-end;
+}
+.postsInput {
+  display: flex;
+  border: solid 1px #b1589b;
+  font-size: 15px;
+  background: #5f5277;
+  border-radius: 10px;
+  height: 80px;
+  width: 100%;
+}
+.profilePicturePost {
+  height: 60px;
+  width: 60px;
+  align-self: center;
+  border-radius: 50%;
+  margin: 0px 10px 0px 0px;
+}
+.allPosts {
+  width: 100%;
+  height: 80%;
+  gap: 10px;
+  border: 0;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  overflow-y: auto;
+}
+.divPostMain {
+  margin: auto;
+  height: 300px !important;
+  width: inherit;
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  border: solid 1px #b1589b;
+  box-shadow: 0px 0px 5px 1px rgb(168 84 149 / 45%);
+  padding: 5px;
+  border-radius: 10px;
+  color: white;
+  background-color: #411946;
+}
+.divPostPic {
+  display: flex;
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+#picUrl {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+.divPostContent {
+  width: 85%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.contentBox {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: space-between;
+  padding: 5px;
+}
+.postName {
+  text-align: center;
+  width: 30%;
+  height: 50px;
+  color: white;
+  padding: 5px;
+  font-size: 12px;
+}
+.postDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+  opacity: 80%;
+  width: 65%;
+  height: 40px;
+  font-size: 10px;
+  margin: 5px;
+  gap: 5px;
+}
+.postDesc {
+  color: white;
+  width: 100%;
+  background: purple;
+  border-radius: 10px;
+  text-align: left;
+  padding: 10px;
+}
+.edit {
+  display: flex;
+  gap: 4px;
+}
+.edit img {
+  height: 15px;
+  width: 15px;
+  gap: 5px;
+}
+.likeIcons {
+  display: flex;
+  gap: 5px;
+  margin: 5px;
+  gap: 5px;
+  width: -webkit-fill-available;
+  height: 20px;
+  justify-content: flex-end;
+}
+.likeIcons img {
+  width: 25px;
+  height: 25px;
+  filter: invert(1);
+}
+.juegofav {
+  /* TRENDS */
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: small;
+}
+.fav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 25px;
+  font-family: 'Do Hyeon', sans-serif;
+}
+.buttontrend {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  border: 0;
+  border-radius: 15px;
+  width: 10%;
+  height: 9%;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.trendingDataDiv {
+  background-size: contain;
+}
+.socialmedia {
+  gap: 20px;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+.edit img {
+  filter: invert(1);
+}
+.socialmedia img {
+  filter: invert(1);
+}
+.games {
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #656fcb;
+  font-family: 'Do Hyeon', sans-serif;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+.emptyLike {
+  background-image: url(./assets/heart.png);
+}
+.fullLike {
+  background-image: url(./assets/heart-filled.png);
+}
+
+/* RESPONSIVE PANTALLAS GRANDES */
+@media only screen and (min-width: 990px) {
+  body {
+    background-image: url(https://giffiles.alphacoders.com/214/214388.gif);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: opacity(20%);
+  }
+  #mainRoute {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  /* Pantalla de Login y Register */
+  .mainContainer {
+    border: 2px solid #b1589b;
+    box-shadow: 0px 0px 8px 1px #b1589b;
+    border-radius: 8px;
+    height: 85%;
+    width: 35%;
+    align-self: flex-end;
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 80px;
+    padding: 35px;
+    gap: 30px;
+  }
+  .registerContainer {
+    height: 100px;
+  }
+  .transparent-input {
+    font-size: 16px;
+  }
+  .mainContainer button {
+    font-size: 15px;
+  }
+  /* Todo lo de Posts */
+  #navbarContainer {
+    position: sticky;
+    top: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 70px;
+    background-color: #411946;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #buttonLogOut {
+    margin-right: 20px;
+    height: 40px;
+    background-color: #b1589b;
+  }
+  .logogg {
+    height: inherit;
+    padding: 10px;
+    margin-left: 20px;
+  }
+  .tittlepost {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .postsContainer {
+    width: 95%;
+    max-width: fit-content;
+    margin: auto;
+    height: 100%;
+    background-color: #251a3b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .userDataContainer {
+    height: 900px;
+    width: 25%;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  #userDataDiv {
+    height: 300px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  #trendingDataDiv {
+    height: 600px;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .divPosts {
+    height: 900px;
+    width: 70%;
+    margin-left: 0px;
+    text-align: center;
+  }
+  .allPosts {
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .divPostMain {
+    margin: auto;
+    height: 300px !important;
+    width: inherit;
+    gap: 20px;
+    border: solid 1px #b1589b;
+    padding: 25px;
+  }
+  .divPostPic {
+    display: flex;
+    height: 90px;
+    width: 90px;
+    align-self: center;
+  }
+  #picUrl {
+    border: solid 1px #b1589b;
+  }
+  .divPostContent {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .postName {
+    text-align: left;
+    width: 40%;
+    padding: 10px;
+    font-size: 18px;
+  }
+  .postDate {
+    width: 55%;
+    height: 30px;
+    font-size: 15px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+  }
+  .edit {
+    display: flex;
+    flex-direction: row;
+  }
+  .edit img {
+    display: flex;
+    gap: 5px;
+    margin: 5px;
+    height: 20px;
+    width: 20px;
+    justify-content: flex-end;
+  }
+  .contentBox {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-between;
+    padding: 5px;
+  }
+  .likeIcons {
+    gap: 15px;
+  }
+  .icons {
+    width: 25px;
+    height: 25px;
+  }
+  /* Habian dos clases para el mismo div */
+  .insidePost {
+    background-color: #411946;
+    border: solid 1px #b1589b;
+    box-shadow: 0px 0px 5px 1px rgb(168 84 149 / 45%);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .postsContainer button:hover {
+    background-color: #6980c7;
+  }
+  .postsContainer button {
+    padding: 15px;
+    margin: 5px;
+  }
+  .profilePicturePost {
+    display: block;
+    border: solid 1px #b1589b;
+    background: #5f5277;
+    border-radius: 50%;
+    background-size: auto;
+    background-attachment: fixed;
+  }
+  .options {
+    border: 0;
+    border-radius: 10px;
+    background: #251a3a;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    border: solid 1px #5f5277;
+  }
+  #filter {
+    border: 0;
+    border-radius: 10px;
+    background: #251a3a;
+    color: #fff;
+    width: 100px;
+    padding: 10px;
+    border: solid 1px #5f5277;
+  }
+  .divfilter {
+    /*falta posicionar el fiv en la cosita abajo y que no este al lado */
+    width: 100%; 
+  }
+}
+/*FOOTER*/
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  background-color: #251a3b;
+  opacity: 90%;
+  padding: 5px;
+}
